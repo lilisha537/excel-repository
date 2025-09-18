@@ -30,6 +30,7 @@ def user_session(session,user_token):
 @pytest.fixture()
 def admin_session(session):
     session.headers["X-API-KEY"]= "5dfnk6DUHK+"
+    print(2)
     yield session
     session.headers.pop("X-API-KEY")
 
